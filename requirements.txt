@@ -1,0 +1,18 @@
+# --- core -------------------------------------------------------------
+torch>=2.3
+torchvision>=0.18          # transforms.v2 (image + mask augmentation)
+numpy>=1.24
+opencv-python-headless>=4.8
+pandas>=2.0
+scipy>=1.10                # Hausdorff distance
+matplotlib>=3.7
+tqdm>=4.65
+
+# --- needed only for some steps ---------------------------------------
+kagglehub>=0.3             # download_data.py  (LGG MRI dataset from Kaggle)
+nibabel>=5.0               # prepare_msd.py    (CT / MRI NIfTI volumes -> 2-D slices)
+streamlit>=1.50            # app.py            (demo web app)
+tabulate>=0.9              # compare_runs.py   (markdown table)
+
+# --- optional: pretrained-encoder U-Net  (model name: smp-unet-resnet34) ---
+# segmentation-models-pytorch>=0.3.4

@@ -1,0 +1,16 @@
+data/
+runs/
+results/
+figures/
+outputs/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.venv/
+.cache/
+debug_crop.png
+*.png
+!demo_samples/**
+.DS_Store
+.vscode/
+.idea/
