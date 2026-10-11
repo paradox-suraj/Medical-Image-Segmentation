@@ -11,6 +11,7 @@ __pycache__/
 debug_crop.png
 *.png
 !demo_samples/**
+!assets/**
 .DS_Store
 .vscode/
 .idea/

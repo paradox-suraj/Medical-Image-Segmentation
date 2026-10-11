@@ -2,6 +2,10 @@
 
 Deep learning framework in PyTorch for brain lesion and tissue segmentation on MRI and CT scans. Implements **U-Net** and **FCN-32s / 16s / 8s** architectures with joint spatial-photometric augmentations, strict patient-level dataset partitioning, and standard overlap and boundary metrics (Dice, IoU, HD95).
 
+<p align="center">
+  <img src="assets/workstation_interface.png" alt="Neuro-Oncology Segmentation Workstation" width="100%">
+</p>
+
 ## 1. Setup
 
 ```bash
@@ -57,10 +61,38 @@ python compare_runs.py runs/unet runs/fcn32s runs/fcn8s runs/unet_noaug runs/une
 
 ## 4. Inference & Interactive Workstation
 
+Run slice-level inference via CLI or launch the interactive clinical workstation:
+
 ```bash
+# Command-line inference
 python predict.py --run runs/unet --image data/lgg/<patient>/<slice>.tif --mask data/lgg/<patient>/<slice>_mask.tif --out outputs/case1
+
+# Interactive Streamlit workstation
 streamlit run app.py
 ```
+
+### Workstation Features
+
+#### Multi-Model Architecture Comparator
+Compare segmentation contours across multiple trained models (e.g., U-Net baseline, FCN-8s, transfer learning backbones, and ablation runs) side-by-side on any selected MRI scan:
+
+<p align="center">
+  <img src="assets/multi_model_comparator.png" alt="Multi-Model Architecture Comparator" width="100%">
+</p>
+
+#### Clinical Patient Registry (TCGA-LGG)
+Integrated cohort registry displaying genomic clusters, histological grades, and patient metadata corresponding to the 110 cases in the dataset:
+
+<p align="center">
+  <img src="assets/clinical_database.png" alt="TCGA-LGG Clinical Patient Registry" width="100%">
+</p>
+
+#### Automated Clinical Radiology Report Export
+Generate verifiable clinical PDF reports complete with scan metadata, tumor probability maps, quantitative volumetric biomarkers (cross-sectional area, estimated 3D volume, planar equivalent diameter, spatial centroid), and radiologist impression sign-offs:
+
+<p align="center">
+  <img src="assets/clinical_radiology_report.png" alt="Clinical Radiology Report" width="65%">
+</p>
 
 ## 5. Repository Structure
 
