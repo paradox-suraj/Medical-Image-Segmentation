@@ -2,6 +2,10 @@
 
 Deep learning framework in PyTorch for brain lesion and tissue segmentation on MRI and CT scans. Implements **U-Net** and **FCN-32s / 16s / 8s** architectures with joint spatial-photometric augmentations, strict patient-level dataset partitioning, and standard overlap and boundary metrics (Dice, IoU, HD95).
 
+[![Project Report](https://img.shields.io/badge/Project_Report-PDF-red?logo=adobeacrobatreader&logoColor=white)](docs/MedSeg_Final_Project_Report.pdf)
+
+> 📄 **Academic Project Report**: The full 20-page project report is available here: [**MedSeg Final Project Report (PDF)**](docs/MedSeg_Final_Project_Report.pdf).
+
 <p align="center">
   <img src="assets/workstation_interface.png" alt="Neuro-Oncology Segmentation Workstation" width="100%">
 </p>
@@ -104,6 +108,7 @@ Generate verifiable clinical PDF reports complete with scan metadata, tumor prob
 | `medseg/losses.py` | Soft Dice, BCE, BCE-Dice combo, Focal-Tversky |
 | `medseg/metrics.py` | Dice, IoU, Precision, Recall, Specificity, 95th-percentile Hausdorff Distance |
 | `medseg/inference.py` | Checkpoint loading and inference with test-time augmentation |
+| `docs/MedSeg_Final_Project_Report.pdf` | Academic project report (20 pages, PDF) |
 | `train.py` | Training loop with AMP, AdamW, ReduceLROnPlateau, and early stopping |
 | `evaluate.py` | Test set evaluation and qualitative metric visualizations |
 | `compare_runs.py` | Metric aggregation table and comparative plotting |
